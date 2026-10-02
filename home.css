@@ -87,6 +87,21 @@ nav {
   border-radius: 5px;
 }
 
+.nav-container a:hover {
+  opacity: 50%;
+  font-size: large;
+}
+
+.nav-container a:active {
+  color: var(--secondary-color);
+  opacity: 100%;
+}
+
+#active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
 /*HERO SECTION*/
 
 .hero {
