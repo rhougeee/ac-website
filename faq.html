@@ -3,8 +3,285 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A&C FAQ</title>
+    <title>FAQ | A&C FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared.css" />
     <link rel="stylesheet" href="faq.css" />
   </head>
-  <body></body>
+
+  <body id="top">
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        />
+        <label for="nav-toggle" class="hamburger">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <label for="nav-toggle" class="overlay"></label>
+
+        <!-- Navigation Links -->
+        <ul class="nav-container">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Service</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faq.html" id="active">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <a href="contact.html" class="quote">Get a Quote</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- faq  -->
+      <section class="faq-hero">
+        <div class="hero-content">
+          <span class="section-label">FREQUENTLY ASKED QUESTIONS</span>
+
+          <h1>Frequently Asked Questions</h1>
+
+          <p>
+            Our Frequently Asked Questions (FAQ) section is designed to provide
+            clear and helpful information to guide you through every step of
+            getting a reliable fiber optic connection.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="contact.html" class="quote-button">Get a Free Quote</a>
+            <a href="tel:+639639561924" class="call-button">Call Us Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <details name="faq" open>
+          <summary>What is fiber optic internet</summary>
+          <p>
+            Fiber-optic internet is a high-speed broadband connection that
+            transmits data as pulses of light through ultra-thin strands of
+            glass or plastic.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>What is fiber optic cable installation?</summary>
+          <p>
+            Fiber optic cable installation is the process of laying and
+            connecting fiber optic cables to establish reliable, high-speed
+            communication networks. This may involve aerial installation,
+            underground cable laying, splicing, and testing.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>
+            What is the difference between aerial and underground cable
+            installation?
+          </summary>
+          <p>
+            Aerial installation involves placing fiber optic cables along
+            utility poles, while underground installation involves laying cables
+            beneath the ground through conduits, ducts, or underground
+            structures such as manholes and vaults.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>
+            Does A&C Corp provide fiber optic splicing services?
+          </summary>
+          <p>
+            Yes. A&C Corp provides fiber optic splicing services, including
+            fusion splicing and ribbon splicing, to connect fiber optic cables
+            and establish reliable network connections.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>What is OTDR testing, and why is it important?</summary>
+          <p>
+            OTDR (Optical Time-Domain Reflectometer) testing is used to evaluate
+            fiber optic cables, identify faults, locate cable breaks, and
+            measure signal loss. It helps ensure that installed fiber optic
+            networks meet performance requirements.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>
+            How long does a fiber optic installation project take?
+          </summary>
+          <p>
+            Project duration depends on several factors, including the project
+            size, installation method, site conditions, cable route, and overall
+            requirements. A&C Corp assesses each project to determine its
+            expected timeline.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>
+            Does A&C Corp handle both residential and commercial fiber optic
+            installations?
+          </summary>
+          <p>
+            A&C Corp provides fiber optic infrastructure and installation
+            services for various project requirements, including Fiber to the
+            Home (FTTH) and Fiber to the Building (FTTB) deployments.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>
+            Does A&C Corp provide maintenance and repair services?
+          </summary>
+          <p>
+            Yes. A&C Corp offers managed operations and maintenance services,
+            including preventive maintenance, site inspections, emergency cable
+            restoration, and troubleshooting to help maintain network
+            reliability.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>
+            What information is needed to request an inquiry or quotation?
+          </summary>
+          <p>
+            To request a quotation, clients should provide their project
+            location, scope of work, estimated cable route or distance, type of
+            installation required, and any available technical specifications or
+            project plans.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>
+            How can I request A&C Corp's services or get an inquiry/quotation?
+          </summary>
+          <p>
+            You can contact A&C Corp through the contact information or inquiry
+            form on this website. Provide your project details and requirements,
+            and our team will assist you with your inquiry.
+          </p>
+        </details>
+      </section>
+
+      <section class="cta-banner">
+        <h2>Ready to get connected?</h2>
+        <p>Get a free quotation today</p>
+        <a href="contact.html" class="quote-button">Get a Free Quote</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-about">
+          <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
+          <p>Connecting Networks. <br />Building Reliability.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <a class="footer-contact-link" href="tel:+639639561924">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.6 3.8 9.2 3.2l2 4.6-1.7 1.3a14.6 14.6 0 0 0 5.4 5.4l1.3-1.7 4.6 2-.6 2.6a2 2 0 0 1-2.2 1.5A16.9 16.9 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"
+              />
+            </svg>
+            <span>09639561924 </span>
+          </a>
+          <a class="footer-contact-link" href="mailto:rhougenelegend@gmail.com">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            <span>ayuracorporation@gmail.com</span>
+          </a>
+          <a
+            class="footer-contact-link"
+            href="https://www.facebook.com/share/19fNKnvAeK/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="footer-contact-icon footer-contact-icon-facebook"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="currentColor"
+                stroke="none"
+              />
+              <path
+                d="M13.3 21v-8h2.7l.4-3h-3.1V8c0-.9.3-1.4 1.5-1.4h1.7V3.9c-.3 0-1.2-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.5v3h2.6v8h3.2Z"
+                fill="#ffffff"
+                stroke="none"
+              />
+            </svg>
+            <span>Visit our Facebook page</span>
+          </a>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 A&C Corp. All rights reserved.</p>
+    </footer>
+    <a class="back-to-top" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
+  </body>
 </html>

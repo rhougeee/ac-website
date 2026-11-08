@@ -3,23 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A&C Corp</title>
+    <title>Home | A&C Corp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="shared.css" />
     <link rel="stylesheet" href="home.css" />
   </head>
 
-  <body>
+  <body id="top">
     <header>
       <nav>
         <a href="index.html">
           <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
         </a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <label for="nav-toggle" class="hamburger">&#9776;</label>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        />
+        <label for="nav-toggle" class="hamburger">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
         <label for="nav-toggle" class="overlay"></label>
         <ul class="nav-container">
           <li><a href="index.html" id="active">Home</a></li>
@@ -45,54 +63,70 @@
         </p>
         <div class="hero-buttons">
           <a href="contact.html" class="quote-button">Get a free quote</a>
-          <a href="tel:+639105039954" class="call-button">Call us now</a>
+          <a href="tel:+639639561924" class="call-button">
+            <svg
+              class="call-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M7.2 3.5h2.3l1.2 4.1-1.6 1.6a15.4 15.4 0 0 0 5.7 5.7l1.6-1.6 4.1 1.2v2.3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 5.2 5.5a2 2 0 0 1 2-2Z"
+              />
+            </svg>
+            <span>Call us now</span>
+          </a>
         </div>
       </section>
 
       <section class="carousel-loop">
         <div class="carousel-items">
-          <span class="badge">Licensed & Insured</span>
+          <span class="badge">Professional Service</span>
           <span class="separator">•</span>
-          <span class="badge">Certified Technician</span>
+          <span class="badge">Skilled Technician</span>
           <span class="separator">•</span>
-          <span class="badge">Same-Day Site Survey</span>
+          <span class="badge">Site Assessment Available</span>
           <span class="separator">•</span>
-          <span class="badge">Clean, Professional Install</span>
+          <span class="badge">Quality-Focused Installation</span>
           <span class="separator">•</span>
-          <span class="badge">Shinro is the Goat</span>
-          <span class="separator">•</span>
-
-          <span class="badge">Licensed & Insured</span>
-          <span class="separator">•</span>
-          <span class="badge">Certified Technician</span>
-          <span class="separator">•</span>
-          <span class="badge">Same-Day Site Survey</span>
-          <span class="separator">•</span>
-          <span class="badge">Clean, Professional Install</span>
-          <span class="separator">•</span>
-          <span class="badge">Shinro is the Goat</span>
+          <span class="badge">Customer-Focused Service</span>
           <span class="separator">•</span>
 
-          <span class="badge">Licensed & Insured</span>
+          <span class="badge">Professional Service</span>
           <span class="separator">•</span>
-          <span class="badge">Certified Technician</span>
+          <span class="badge">Skilled Technician</span>
           <span class="separator">•</span>
-          <span class="badge">Same-Day Site Survey</span>
+          <span class="badge">Site Assessment Available</span>
           <span class="separator">•</span>
-          <span class="badge">Clean, Professional Install</span>
+          <span class="badge">Quality-Focused Installation</span>
           <span class="separator">•</span>
-          <span class="badge">Shinro is the Goat</span>
+          <span class="badge">Customer-Focused Service</span>
           <span class="separator">•</span>
 
-          <span class="badge">Licensed & Insured</span>
+          <span class="badge">Professional Service</span>
           <span class="separator">•</span>
-          <span class="badge">Certified Technician</span>
+          <span class="badge">Skilled Technician</span>
           <span class="separator">•</span>
-          <span class="badge">Same-Day Site Survey</span>
+          <span class="badge">Site Assessment Available</span>
           <span class="separator">•</span>
-          <span class="badge">Clean, Professional Install</span>
+          <span class="badge">Quality-Focused Installation</span>
           <span class="separator">•</span>
-          <span class="badge">Shinro is the Goat</span>
+          <span class="badge">Customer-Focused Service</span>
+          <span class="separator">•</span>
+
+          <span class="badge">Professional Service</span>
+          <span class="separator">•</span>
+          <span class="badge">Skilled Technician</span>
+          <span class="separator">•</span>
+          <span class="badge">Site Assessment Available</span>
+          <span class="separator">•</span>
+          <span class="badge">Quality-Focused Installation</span>
+          <span class="separator">•</span>
+          <span class="badge">Customer-Focused Service</span>
           <span class="separator">•</span>
         </div>
       </section>
@@ -101,6 +135,22 @@
         <h2>Our Services</h2>
         <div class="service-grid">
           <div class="service-card">
+            <svg
+              class="service-card-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 8h5l4 4 4-4h5M3 16h5l4-4 4 4h5" />
+              <circle cx="3" cy="8" r="1.5" />
+              <circle cx="21" cy="8" r="1.5" />
+              <circle cx="3" cy="16" r="1.5" />
+              <circle cx="21" cy="16" r="1.5" />
+            </svg>
             <h3>Fiber Optic Installation</h3>
             <p>
               Professional installation and deployment of fiber-optic networks
@@ -109,6 +159,21 @@
           </div>
 
           <div class="service-card">
+            <svg
+              class="service-card-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="5" cy="12" r="2" />
+              <circle cx="19" cy="5" r="2" />
+              <circle cx="19" cy="19" r="2" />
+              <path d="m7 11 10-5M7 13l10 5" />
+            </svg>
             <h3>Network Infrastructure</h3>
             <p>
               Complete infrastructure solutions, including OSP, structured
@@ -117,6 +182,21 @@
           </div>
 
           <div class="service-card">
+            <svg
+              class="service-card-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M14 4h6v6M20 4l-8 8" />
+              <path
+                d="M10 6H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"
+              />
+            </svg>
             <h3>Testing & Maintenance</h3>
             <p>
               Fiber testing, preventive maintenance, and rapid restoration
@@ -179,6 +259,7 @@
 
         <div class="footer-links">
           <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
@@ -186,11 +267,73 @@
 
         <div class="footer-contact">
           <h4>Contact</h4>
-          <a href="tel:+639105039954">+63 910 503 9954</a>
-          <a href="mailto:rhougenelegend@gmail.com">rhougenelegend@gmail.com</a>
+          <a class="footer-contact-link" href="tel:+639639561924">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.6 3.8 9.2 3.2l2 4.6-1.7 1.3a14.6 14.6 0 0 0 5.4 5.4l1.3-1.7 4.6 2-.6 2.6a2 2 0 0 1-2.2 1.5A16.9 16.9 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"
+              />
+            </svg>
+            <span>09639561924</span>
+          </a>
+          <a class="footer-contact-link" href="mailto:rhougenelegend@gmail.com">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            <span>ayuracorporation@gmail.com</span>
+          </a>
+          <a
+            class="footer-contact-link"
+            href="https://www.facebook.com/share/19fNKnvAeK/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="footer-contact-icon footer-contact-icon-facebook"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="currentColor"
+                stroke="none"
+              />
+              <path
+                d="M13.3 21v-8h2.7l.4-3h-3.1V8c0-.9.3-1.4 1.5-1.4h1.7V3.9c-.3 0-1.2-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.5v3h2.6v8h3.2Z"
+                fill="#ffffff"
+                stroke="none"
+              />
+            </svg>
+            <span>Visit our Facebook page</span>
+          </a>
         </div>
       </div>
       <p class="copyright">&copy; 2026 A&C Corp. All rights reserved.</p>
     </footer>
+    <a class="back-to-top" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
   </body>
 </html>

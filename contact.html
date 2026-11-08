@@ -3,22 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A&C Contact</title>
+    <title>Contact | A&C Contact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="shared.css" />
     <link rel="stylesheet" href="contact.css" />
   </head>
-  <body>
+  <body id="top">
     <header>
       <nav>
         <a href="index.html">
           <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
         </a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <label for="nav-toggle" class="hamburger">&#9776;</label>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        />
+        <label for="nav-toggle" class="hamburger">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
         <label for="nav-toggle" class="overlay"></label>
         <ul class="nav-container">
           <li><a href="index.html">Home</a></li>
@@ -34,42 +52,46 @@
 
     <main>
       <section class="contact-banner">
+        <span class="section-label">GET IN TOUCH</span>
         <h1>Contact Us</h1>
         <p>Have a project in mind? Let's talk</p>
       </section>
 
       <section class="contact-layout">
         <form
-          action="mailto:rhougenelegend@gmail.com"
-          method="post"
-          enctype="text/plain"
+          class="contact-form"
+          action="https://formspree.io/f/xqppdnve"
+          method="POST"
         >
           <h2>Tell us about your project</h2>
           <p>
             Include your location, service needed, project scope, and any
             relevant requirements.
           </p>
-          <div class="form-container">
+          <div class="form-grid">
             <div class="form-group">
-              <label for="name"><b>Name</b></label>
+              <label for="Name"><b>Full Name</b></label>
               <input
                 type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
+                id="Name"
+                name="Name"
+                placeholder="Enter your full name"
                 autocomplete="name"
+                minlength="2"
+                maxlength="100"
                 required
               />
             </div>
 
             <div class="form-group">
-              <label for="email"><b>Email</b></label>
+              <label for="Email"><b>Email Address</b></label>
               <input
                 type="email"
-                id="email"
-                name="email"
+                id="Email"
+                name="Email"
                 placeholder="Enter your email"
                 autocomplete="email"
+                maxlength="254"
                 required
               />
             </div>
@@ -79,9 +101,10 @@
               <input
                 type="tel"
                 id="phone"
-                name="phone"
+                name="Phone"
                 placeholder="09123456789"
                 autocomplete="tel"
+                maxlength="30"
               />
             </div>
 
@@ -90,70 +113,207 @@
               <input
                 type="text"
                 id="city"
-                name="city"
+                name="Location"
                 placeholder="Enter your city"
                 autocomplete="address-level2"
+                maxlength="100"
               />
             </div>
 
             <div class="form-group">
-              <label for="service-interest"
-                ><b>Service Interest</b> (optional)</label
+              <label for="service-interest"><b>Service of Interest</b></label>
+              <select
+                id="service-interest"
+                name="Service"
+                autocomplete="off"
+                required
               >
-              <select id="service-interest" name="service-interest">
-                <option value="" selected>Select a Service</option>
-                <option>OSP Infrastructure</option>
-                <option>Fiber Optic Infrastructure Services</option>
-                <option>ISP Inside Plant &amp; Structured Cabling</option>
-                <option>Managed Operation &amp; Maintenance</option>
-                <option>Home Fiber (FTTH)</option>
-                <option>Other</option>
+                <option value="" selected disabled>Select a Service</option>
+                <optgroup label="OSP Infrastructure">
+                  <option value="Pole Line">Pole Line</option>
+                  <option value="Manhole">Manhole</option>
+                  <option value="Vault">Vault</option>
+                </optgroup>
+                <optgroup label="Fiber Optic Infrastructure">
+                  <option value="Fusion Splicing">Fusion Splicing</option>
+                  <option value="Ribbon Splicing">Ribbon Splicing</option>
+                  <option value="Fiber Optic Testing (OTDR)">
+                    Fiber Optic Testing (OTDR)
+                  </option>
+                  <option value="ODF (Optical Distribution Frame)">
+                    ODF (Optical Distribution Frame)
+                  </option>
+                  <option value="FTTH (Fiber To The Home)">
+                    FTTH (Fiber To The Home)
+                  </option>
+                  <option value="FTTB (Fiber To The Building)">
+                    FTTB (Fiber To The Building)
+                  </option>
+                </optgroup>
+                <optgroup label="Inside Plant &amp; Structured Cabling">
+                  <option value="Server Room Installation">
+                    Server Room Installation
+                  </option>
+                  <option value="Data Center Installation">
+                    Data Center Installation
+                  </option>
+                  <option value="Rack Installation">Rack Installation</option>
+                  <option value="Cabinet Installation">
+                    Cabinet Installation
+                  </option>
+                  <option value="NAP Box Installation">
+                    NAP Box Installation
+                  </option>
+                  <option value="Drilling">Drilling</option>
+                  <option value="Cable Laying">Cable Laying</option>
+                </optgroup>
+                <optgroup label="Managed Operation &amp; Maintenance">
+                  <option value="Emergency Restoration">
+                    Emergency Restoration
+                  </option>
+                  <option value="SLA-Driven Rapid Response">
+                    SLA-Driven Rapid Response
+                  </option>
+                  <option value="Preventive Maintenance">
+                    Preventive Maintenance
+                  </option>
+                  <option value="Site Audits">Site Audits</option>
+                  <option value="Vegetation Management">
+                    Vegetation Management
+                  </option>
+                </optgroup>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message"><b>Message</b></label>
+              <label for="Subject"><b>Subject</b></label>
+              <input
+                type="text"
+                id="Subject"
+                name="Subject"
+                placeholder="What is your inquiry about?"
+                minlength="3"
+                maxlength="150"
+                required
+              />
+            </div>
+
+            <div class="form-group form-group-wide">
+              <label for="Message"><b>Message</b></label>
               <textarea
-                name="message"
-                id="message"
+                name="Message"
+                id="Message"
                 placeholder="Tell us what you need"
+                minlength="10"
+                maxlength="3000"
                 required
               ></textarea>
             </div>
 
-            <button type="submit">Send message</button>
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input
+                type="text"
+                id="website"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-submit form-group-wide">
+              <button type="submit" aria-describedby="privacy-note">
+                Send Inquiry
+              </button>
+              <p class="privacy-notice" id="privacy-note">
+                The information you submit will be used to respond to your
+                inquiry and communicate with you about the services you
+                requested.
+              </p>
+            </div>
           </div>
         </form>
 
         <aside class="contact-info">
           <h2>Contact Details</h2>
-          <p><b>Phone:</b> <a href="tel:+639105039954">0910 503 9954</a></p>
-          <p>
-            <b>Email:</b>
-            <a href="mailto:rhougenelegend@gmail.com"
-              >rhougenelegend@gmail.com</a
-            >
-          </p>
+          <div class="contact-details">
+            <p>
+              <b>Phone:</b>
+              <a class="contact-detail-link" href="tel:+639639561924">
+                <svg
+                  class="contact-detail-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7.2 3.5h2.3l1.2 4.1-1.6 1.6a15.4 15.4 0 0 0 5.7 5.7l1.6-1.6 4.1 1.2v2.3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 5.2 5.5a2 2 0 0 1 2-2Z"
+                  />
+                </svg>
+                <span>0963 956 1924</span>
+              </a>
+            </p>
+            <p>
+              <b>Email:</b>
+              <a
+                class="contact-detail-link"
+                href="mailto:rhougenelegend@gmail.com"
+              >
+                <svg
+                  class="contact-detail-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" />
+                </svg>
+                <span>ayuracorporation@gmail.com </span>
+              </a>
+            </p>
+            <p>
+              <b>Facebook:</b>
+              <a
+                class="contact-detail-link"
+                href="https://www.facebook.com/share/19fNKnvAeK/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  class="contact-detail-icon contact-detail-icon-facebook"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <path
+                    d="M13.3 21v-8h2.7l.4-3h-3.1V8c0-.9.3-1.4 1.5-1.4h1.7V3.9c-.3 0-1.2-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.5v3h2.6v8h3.2Z"
+                    fill="#ffffff"
+                    stroke="none"
+                  />
+                </svg>
+                <span>Visit our Facebook page</span>
+              </a>
+            </p>
 
-          <p>
-            <b>Have some questions?</b>
-            <a href="faq.html">
-              <br />
-              <b style="color: #ff6b35">Check our FAQ first</b></a
-            >
-          </p>
+            <p class="faq-prompt">
+              <b>Have some questions?</b>
+              <a href="faq.html"><b>Check our FAQ first</b></a>
+            </p>
 
-          <br />
+            <p><b>Business Hours:</b> Monday - Saturday (7:00 AM - 5:00PM)</p>
 
-          <p><b>Business Hours:</b> Monday - Saturday (7:00 AM - 5:00PM)</p>
-
-          <p><b>Business Location:</b></p>
+            <p><b>Business Location:</b></p>
+          </div>
           <div class="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d574.0370705602926!2d121.21449825063839!3d14.562241132380707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1790948209887!5m2!1sen!2sph"
-              width="600"
-              height="450"
-              style="border: 0"
+              title="Map showing A&amp;C Corp business location"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -172,6 +332,7 @@
 
         <div class="footer-links">
           <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
@@ -179,11 +340,73 @@
 
         <div class="footer-contact">
           <h4>Contact</h4>
-          <a href="tel:+639105039954">+63 910 503 9954</a>
-          <a href="mailto:rhougenelegend@gmail.com">rhougenelegend@gmail.com</a>
+          <a class="footer-contact-link" href="tel:+639639561924">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.6 3.8 9.2 3.2l2 4.6-1.7 1.3a14.6 14.6 0 0 0 5.4 5.4l1.3-1.7 4.6 2-.6 2.6a2 2 0 0 1-2.2 1.5A16.9 16.9 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"
+              />
+            </svg>
+            <span>09639561924</span>
+          </a>
+          <a class="footer-contact-link" href="mailto:rhougenelegend@gmail.com">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            <span>ayuracorporation@gmail.com</span>
+          </a>
+          <a
+            class="footer-contact-link"
+            href="https://www.facebook.com/share/19fNKnvAeK/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="footer-contact-icon footer-contact-icon-facebook"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="currentColor"
+                stroke="none"
+              />
+              <path
+                d="M13.3 21v-8h2.7l.4-3h-3.1V8c0-.9.3-1.4 1.5-1.4h1.7V3.9c-.3 0-1.2-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.5v3h2.6v8h3.2Z"
+                fill="#ffffff"
+                stroke="none"
+              />
+            </svg>
+            <span>Visit our Facebook page</span>
+          </a>
         </div>
       </div>
       <p class="copyright">&copy; 2026 A&C Corp. All rights reserved.</p>
     </footer>
+    <a class="back-to-top" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
   </body>
 </html>

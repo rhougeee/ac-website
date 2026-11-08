@@ -3,22 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A&C Gallery</title>
+    <title>Gallery | A&C Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="shared.css" />
     <link rel="stylesheet" href="gallery.css" />
   </head>
-  <body>
+  <body id="top">
     <header>
       <nav>
         <a href="index.html">
           <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
         </a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <label for="nav-toggle" class="hamburger">&#9776;</label>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        />
+        <label for="nav-toggle" class="hamburger">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
         <label for="nav-toggle" class="overlay"></label>
         <ul class="nav-container">
           <li><a href="index.html">Home</a></li>
@@ -39,162 +57,1134 @@
       </section>
 
       <section class="gallery-cards">
-        <div class="card-grid">
-          <a href="#photo1">
-            <figure class="gallery-card">
-              <img
-                src="images/fiber-installation.jpg"
-                alt="Technician connecting fiber cable to a home junction box"
-                loading="lazy"
-              />
-              <figcaption>
-                Home Fiber Installation
-                <span class="tag">Fiber Infrastructure</span>
-              </figcaption>
-            </figure>
-          </a>
+        <!--
+          para mag add ng photos sa gallery:
 
-          <a href="#photo2"
-            ><figure class="gallery-card">
-              <img
-                src="images/underground-cable.jpg"
-                alt="Installed underground cable"
-                loading="lazy"
-              />
-              <figcaption>
-                Underground Trenching
-                <span class="tag">Outdoor Infrastructure (OSP)</span>
-              </figcaption>
-            </figure>
-          </a>
+          1. In the service's card, replace the <div class="photo-placeholder">No photo available yet</div>
+             with a .photo-set that has one <a> tile per photo:
 
-          <a href="#photo3"
-            ><figure class="gallery-card">
-              <img
-                src="images/server-installation.jpg"
-                alt="Installed cable in server room"
-                loading="lazy"
-              />
-              <figcaption>
-                Office Network Setup
-                <span class="tag">Inside Plant & Structured Cabling</span>
-              </figcaption>
-            </figure>
-          </a>
+               <div class="photo-set">
+                 <a href="#fusion-splicing-1">
+                   <img src="images/one.jpg" alt="..." loading="lazy" />
+                 </a>
+                 <a href="#fusion-splicing-2">
+                   <img src="images/two.jpg" alt="..." loading="lazy" />
+                 </a>
+               </div>
+        -->
 
-          <a href="#photo4"
-            ><figure class="gallery-card">
-              <img
-                src="images/pole-installation.jpg"
-                alt="Technician installing cable in utility pole"
-                loading="lazy"
-              />
-              <figcaption>
-                Pole-To-Building Run
-                <span class="tag">Outdoor Infrastructure (OSP)</span>
-              </figcaption>
-            </figure>
-          </a>
+        <nav class="category-nav" aria-label="Service categories">
+          <a href="#osp">OSP Infrastructure</a>
+          <a href="#fiber-optic">Fiber Optic Infrastructure</a>
+          <a href="#inside-plant">Inside Plant &amp; Structured Cabling</a>
+          <a href="#managed-om">Managed Operation &amp; Maintenance</a>
+        </nav>
 
-          <a href="#photo5"
-            ><figure class="gallery-card">
-              <img
-                src="images/network-splicing.jpg"
-                alt="Spliced network cable"
-                loading="lazy"
-              />
-              <figcaption>
-                Fiber Splicing
-                <span class="tag">Fiber Infrastructure</span>
-              </figcaption>
-            </figure>
-          </a>
+        <section class="gallery-group" id="osp">
+          <h2>OSP Infrastructure</h2>
+          <div class="card-grid">
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#pole-line-1">
+                  <img
+                    src="images/pole-line-1.jpg"
+                    alt="Pole line installation photo 1"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="#pole-line-2"
+                  ><img
+                    src="images/pole-line-2.jpg"
+                    alt="Pole line installation photo 2"
+                    loading="lazy"
+                /></a>
+                <a href="#pole-line-3"
+                  ><img
+                    src="images/pole-line-3.jpg"
+                    alt="Pole line installation photo 3"
+                    loading="lazy"
+                /></a>
+                <a href="#pole-line-4"
+                  ><img
+                    src="images/pole-line-4.jpg"
+                    alt="Pole line installation photo 4"
+                    loading="lazy"
+                /></a>
+                <a href="#pole-line-5"
+                  ><img
+                    src="images/pole-line-5.jpg"
+                    alt="Pole line installation photo 5"
+                    loading="lazy"
+                /></a>
+                <a href="#pole-line-6"
+                  ><img
+                    src="images/pole-line-6.jpg"
+                    alt="Pole line installation photo 6"
+                    loading="lazy"
+                /></a>
+                <a href="#pole-line-7"
+                  ><img
+                    src="images/pole-line-7.jpg"
+                    alt="Pole line installation photo 7"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Pole Line</h3>
+            </article>
 
-          <a href="#photo6"
-            ><figure class="gallery-card">
-              <img
-                src="images/cable-management.jpg"
-                alt="Technician maintaining the cable"
-                loading="lazy"
-              />
-              <figcaption>
-                Line Maintenance Visit
-                <span class="tag">Maintenance & Support (O&M)</span>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#manhole-1">
+                  <img
+                    src="images/manhole-1.jpg"
+                    alt="Manhole construction photo 1"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="#manhole-2"
+                  ><img
+                    src="images/manhole-2.jpg"
+                    alt="Manhole construction photo 2"
+                    loading="lazy"
+                /></a>
+                <a href="#manhole-3"
+                  ><img
+                    src="images/manhole-3.jpg"
+                    alt="Manhole construction photo 3"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Manhole</h3>
+            </article>
 
-        <div id="photo1" class="lightbox">
-          <a href="#close" class="lightbox-close">✕</a>
-          <a href="#photo6" class="lightbox-prev" aria-label="Previous Photo"
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>Vault</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="gallery-group" id="fiber-optic">
+          <h2>Fiber Optic Infrastructure</h2>
+          <div class="card-grid">
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#fusion-splicing-1">
+                  <img
+                    src="images/fusion-splicing-1.jpg"
+                    alt="Fusion splicing photo 1"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="#fusion-splicing-2"
+                  ><img
+                    src="images/fusion-splicing-2.jpg"
+                    alt="Fusion splicing photo 2"
+                    loading="lazy"
+                /></a>
+                <a href="#fusion-splicing-3"
+                  ><img
+                    src="images/fusion-splicing-3.jpg"
+                    alt="Fusion splicing photo 3"
+                    loading="lazy"
+                /></a>
+                <a href="#fusion-splicing-4"
+                  ><img
+                    src="images/fusion-splicing-4.jpg"
+                    alt="Fusion splicing photo 4"
+                    loading="lazy"
+                /></a>
+                <a href="#fusion-splicing-5"
+                  ><img
+                    src="images/fusion-splicing-5.jpg"
+                    alt="Fusion splicing photo 5"
+                    loading="lazy"
+                /></a>
+                <a href="#fusion-splicing-6"
+                  ><img
+                    src="images/fusion-splicing-6.jpg"
+                    alt="Fusion splicing photo 6"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Fusion Splicing</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>Ribbon Splicing</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#odf-1"
+                  ><img
+                    src="images/odf-1.jpg"
+                    alt="ODF installation"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>ODF (Optical Distribution Frame)</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#otdr-1"
+                  ><img
+                    src="images/otdr-1.jpg"
+                    alt="OTDR testing"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Fiber Optic Testing (OTDR)</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>FTTH (Fiber To The Home)</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>FTTB (Fiber To The Building)</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="gallery-group" id="inside-plant">
+          <h2>Inside Plant &amp; Structured Cabling</h2>
+          <div class="card-grid">
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>Server Room Installation</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>Data Center Installation</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#rack-installation-1"
+                  ><img
+                    src="images/rack-installation-1.jpg"
+                    alt="Rack installation"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Rack Installation</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#cabinet-installation-1"
+                  ><img
+                    src="images/cabinet-installation-1.jpg"
+                    alt="Cabinet installation photo 1"
+                    loading="lazy"
+                /></a>
+                <a href="#cabinet-installation-2"
+                  ><img
+                    src="images/cabinet-installation-2.jpg"
+                    alt="Cabinet installation photo 2"
+                    loading="lazy"
+                /></a>
+                <a href="#cabinet-installation-3"
+                  ><img
+                    src="images/cabinet-installation-3.jpg"
+                    alt="Cabinet installation photo 3"
+                    loading="lazy"
+                /></a>
+                <a href="#cabinet-installation-4"
+                  ><img
+                    src="images/cabinet-installation-4.jpg"
+                    alt="Cabinet installation photo 4"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Cabinet Installation</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#nap-box-installation-1"
+                  ><img
+                    src="images/nap-box-installation-1.jpg"
+                    alt="NAP box installation photo 1"
+                    loading="lazy"
+                /></a>
+                <a href="#nap-box-installation-2"
+                  ><img
+                    src="images/nap-box-installation-2.jpg"
+                    alt="NAP box installation photo 2"
+                    loading="lazy"
+                /></a>
+                <a href="#nap-box-installation-3"
+                  ><img
+                    src="images/nap-box-installation-3.jpg"
+                    alt="NAP box installation photo 3"
+                    loading="lazy"
+                /></a>
+                <a href="#nap-box-installation-4"
+                  ><img
+                    src="images/nap-box-installation-4.jpg"
+                    alt="NAP box installation photo 4"
+                    loading="lazy"
+                /></a>
+                <a href="#nap-box-installation-5"
+                  ><img
+                    src="images/nap-box-installation-5.jpg"
+                    alt="NAP box installation photo 5"
+                    loading="lazy"
+                /></a>
+                <a href="#nap-box-installation-6"
+                  ><img
+                    src="images/nap-box-installation-6.jpg"
+                    alt="NAP box installation photo 6"
+                    loading="lazy"
+                /></a>
+                <a href="#nap-box-installation-7"
+                  ><img
+                    src="images/nap-box-installation-7.jpg"
+                    alt="NAP box installation photo 7"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>NAP Box Installation</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#drilling-1"
+                  ><img
+                    src="images/drilling-1.jpg"
+                    alt="Drilling"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Drilling</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#cable-laying-1"
+                  ><img
+                    src="images/cable-laying-1.jpg"
+                    alt="Cable laying photo 1"
+                    loading="lazy"
+                /></a>
+                <a href="#cable-laying-2"
+                  ><img
+                    src="images/cable-laying-2.jpg"
+                    alt="Cable laying photo 2"
+                    loading="lazy"
+                /></a>
+                <a href="#cable-laying-3"
+                  ><img
+                    src="images/cable-laying-3.jpg"
+                    alt="Cable laying photo 3"
+                    loading="lazy"
+                /></a>
+                <a href="#cable-laying-4"
+                  ><img
+                    src="images/cable-laying-4.jpg"
+                    alt="Cable laying photo 4"
+                    loading="lazy"
+                /></a>
+                <a href="#cable-laying-5"
+                  ><img
+                    src="images/cable-laying-5.jpg"
+                    alt="Cable laying photo 5"
+                    loading="lazy"
+                /></a>
+                <a href="#cable-laying-6"
+                  ><img
+                    src="images/cable-laying-6.jpg"
+                    alt="Cable laying photo 6"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Cable Laying</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="gallery-group" id="managed-om">
+          <h2>Managed Operation &amp; Maintenance</h2>
+          <div class="card-grid">
+            <article class="gallery-card">
+              <div class="photo-set">
+                <a href="#otdr-1"
+                  ><img
+                    src="images/otdr-1.jpg"
+                    alt="OTDR testing"
+                    loading="lazy"
+                /></a>
+              </div>
+              <h3>Emergency Restoration</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>SLA-Driven Rapid Response</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>Preventive Maintenance</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>Site Audits</h3>
+            </article>
+
+            <article class="gallery-card">
+              <div class="photo-placeholder">No photo available yet</div>
+              <h3>Vegetation Management</h3>
+            </article>
+          </div>
+        </section>
+
+        <!--
+          LIGHTBOXES:
+
+          Single photo - close button only
+
+          Multiple Photo:
+
+            <div id="fusion-splicing-1" class="lightbox">
+              <a href="#close" class="lightbox-close" aria-label="Close">✕</a>
+              <a href="#fusion-splicing-3" class="lightbox-prev" aria-label="Previous photo">◄</a>
+              <a href="#fusion-splicing-2" class="lightbox-next" aria-label="Next photo">►</a>
+              <img src="images/one.jpg" alt="..." loading="lazy" />
+              <p class="lightbox-caption">Fusion Splicing</p>
+            </div>
+              loading="lazy"
+        -->
+
+        <div id="pole-line-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">
+            <svg
+              class="lightbox-close-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </a>
+          <a
+            href="#pole-line-7"
+            class="lightbox-prev"
+            aria-label="Previous photo"
             >◄</a
           >
-          <a href="#photo2" class="lightbox-next" aria-label="Next Photo">►</a>
+          <a href="#pole-line-2" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
           <img
-            src="images/fiber-installation.jpg"
-            alt="Technician connecting fiber cable to a home junction box"
+            src="images/pole-line-1.jpg"
+            alt="Pole line installation photo 1"
+            loading="lazy"
           />
+          <p class="lightbox-caption">Pole Line</p>
         </div>
 
-        <div id="photo2" class="lightbox">
-          <a href="#close" class="lightbox-close">✕</a>
-          <a href="#photo1" class="lightbox-prev" aria-label="Previous Photo"
+        <div id="manhole-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">
+            <svg
+              class="lightbox-close-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </a>
+          <a href="#manhole-3" class="lightbox-prev" aria-label="Previous photo"
             >◄</a
           >
-          <a href="#photo3" class="lightbox-next" aria-label="Next Photo">►</a>
+          <a href="#manhole-2" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
           <img
-            src="images/underground-cable.jpg"
-            alt="Technician connecting fiber cable to a home junction box"
+            src="images/manhole-1.jpg"
+            alt="Manhole construction photo 1"
+            loading="lazy"
           />
+          <p class="lightbox-caption">Manhole</p>
         </div>
 
-        <div id="photo3" class="lightbox">
-          <a href="#close" class="lightbox-close">✕</a>
-          <a href="#photo2" class="lightbox-prev" aria-label="Previous Photo"
+        <div id="fusion-splicing-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">
+            <svg
+              class="lightbox-close-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </a>
+          <a
+            href="#fusion-splicing-6"
+            class="lightbox-prev"
+            aria-label="Previous photo"
             >◄</a
           >
-          <a href="#photo4" class="lightbox-next" aria-label="Next Photo">►</a>
+          <a
+            href="#fusion-splicing-2"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
           <img
-            src="images/server-installation.jpg"
-            alt="Technician connecting fiber cable to a home junction box"
+            src="images/fusion-splicing-1.jpg"
+            alt="Fusion splicing photo 1"
+            loading="lazy"
           />
+          <p class="lightbox-caption">Fusion Splicing</p>
         </div>
 
-        <div id="photo4" class="lightbox">
-          <a href="#close" class="lightbox-close">✕</a>
-          <a href="#photo3" class="lightbox-prev" aria-label="Previous Photo"
+        <div id="pole-line-2" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#pole-line-1"
+            class="lightbox-prev"
+            aria-label="Previous photo"
             >◄</a
           >
-          <a href="#photo5" class="lightbox-next" aria-label="Next Photo">►</a>
+          <a href="#pole-line-3" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
           <img
-            src="images/pole-installation.jpg"
-            alt="Technician connecting fiber cable to a home junction box"
+            src="images/pole-line-2.jpg"
+            alt="Pole line installation photo 2"
+            loading="lazy"
           />
+          <p class="lightbox-caption">Pole Line</p>
+        </div>
+        <div id="pole-line-3" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#pole-line-2"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a href="#pole-line-4" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/pole-line-3.jpg"
+            alt="Pole line installation photo 3"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Pole Line</p>
+        </div>
+        <div id="pole-line-4" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#pole-line-3"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a href="#pole-line-5" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/pole-line-4.jpg"
+            alt="Pole line installation photo 4"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Pole Line</p>
+        </div>
+        <div id="pole-line-5" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#pole-line-4"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a href="#pole-line-6" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/pole-line-5.jpg"
+            alt="Pole line installation photo 5"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Pole Line</p>
+        </div>
+        <div id="pole-line-6" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#pole-line-5"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a href="#pole-line-7" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/pole-line-6.jpg"
+            alt="Pole line installation photo 6"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Pole Line</p>
+        </div>
+        <div id="pole-line-7" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#pole-line-6"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a href="#pole-line-1" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/pole-line-7.jpg"
+            alt="Pole line installation photo 7"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Pole Line</p>
+        </div>
+        <div id="manhole-2" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a href="#manhole-1" class="lightbox-prev" aria-label="Previous photo"
+            >◄</a
+          >
+          <a href="#manhole-3" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/manhole-2.jpg"
+            alt="Manhole construction photo 2"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Manhole</p>
+        </div>
+        <div id="manhole-3" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a href="#manhole-2" class="lightbox-prev" aria-label="Previous photo"
+            >◄</a
+          >
+          <a href="#manhole-1" class="lightbox-next" aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/manhole-3.jpg"
+            alt="Manhole construction photo 3"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Manhole</p>
+        </div>
+        <div id="fusion-splicing-2" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#fusion-splicing-1"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#fusion-splicing-3"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/fusion-splicing-2.jpg"
+            alt="Fusion splicing photo 2"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Fusion Splicing</p>
+        </div>
+        <div id="fusion-splicing-3" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#fusion-splicing-2"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#fusion-splicing-4"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/fusion-splicing-3.jpg"
+            alt="Fusion splicing photo 3"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Fusion Splicing</p>
+        </div>
+        <div id="fusion-splicing-4" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#fusion-splicing-3"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#fusion-splicing-5"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/fusion-splicing-4.jpg"
+            alt="Fusion splicing photo 4"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Fusion Splicing</p>
+        </div>
+        <div id="fusion-splicing-5" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#fusion-splicing-4"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#fusion-splicing-6"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/fusion-splicing-5.jpg"
+            alt="Fusion splicing photo 5"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Fusion Splicing</p>
+        </div>
+        <div id="fusion-splicing-6" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#fusion-splicing-5"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#fusion-splicing-1"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/fusion-splicing-6.jpg"
+            alt="Fusion splicing photo 6"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Fusion Splicing</p>
+        </div>
+        <div id="odf-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <img src="images/odf-1.jpg" alt="ODF installation" loading="lazy" />
+          <p class="lightbox-caption">ODF (Optical Distribution Frame)</p>
+        </div>
+        <div id="otdr-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <img src="images/otdr-1.jpg" alt="OTDR testing" loading="lazy" />
+          <p class="lightbox-caption">Fiber Optic Testing (OTDR)</p>
+        </div>
+        <div id="rack-installation-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <img
+            src="images/rack-installation-1.jpg"
+            alt="Rack installation"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Rack Installation</p>
+        </div>
+        <div id="cabinet-installation-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cabinet-installation-4"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cabinet-installation-2"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cabinet-installation-1.jpg"
+            alt="Cabinet installation photo 1"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cabinet Installation</p>
+        </div>
+        <div id="cabinet-installation-2" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cabinet-installation-1"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cabinet-installation-3"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cabinet-installation-2.jpg"
+            alt="Cabinet installation photo 2"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cabinet Installation</p>
+        </div>
+        <div id="cabinet-installation-3" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cabinet-installation-2"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cabinet-installation-4"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cabinet-installation-3.jpg"
+            alt="Cabinet installation photo 3"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cabinet Installation</p>
+        </div>
+        <div id="cabinet-installation-4" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cabinet-installation-3"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cabinet-installation-1"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cabinet-installation-4.jpg"
+            alt="Cabinet installation photo 4"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cabinet Installation</p>
         </div>
 
-        <div id="photo5" class="lightbox">
-          <a href="#close" class="lightbox-close">✕</a>
-          <a href="#photo4" class="lightbox-prev" aria-label="Previous Photo"
+        <div id="nap-box-installation-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#nap-box-installation-7"
+            class="lightbox-prev"
+            aria-label="Previous photo"
             >◄</a
           >
-          <a href="#photo6" class="lightbox-next" aria-label="Next Photo">►</a>
+          <a
+            href="#nap-box-installation-2"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
           <img
-            src="images/network-splicing.jpg"
-            alt="Technician connecting fiber cable to a home junction box"
+            src="images/nap-box-installation-1.jpg"
+            alt="NAP box installation photo 1"
+            loading="lazy"
           />
+          <p class="lightbox-caption">NAP Box Installation</p>
+        </div>
+        <div id="nap-box-installation-2" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#nap-box-installation-1"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#nap-box-installation-3"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/nap-box-installation-2.jpg"
+            alt="NAP box installation photo 2"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">NAP Box Installation</p>
+        </div>
+        <div id="nap-box-installation-3" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#nap-box-installation-2"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#nap-box-installation-4"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/nap-box-installation-3.jpg"
+            alt="NAP box installation photo 3"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">NAP Box Installation</p>
+        </div>
+        <div id="nap-box-installation-4" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#nap-box-installation-3"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#nap-box-installation-5"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/nap-box-installation-4.jpg"
+            alt="NAP box installation photo 4"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">NAP Box Installation</p>
+        </div>
+        <div id="nap-box-installation-5" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#nap-box-installation-4"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#nap-box-installation-6"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/nap-box-installation-5.jpg"
+            alt="NAP box installation photo 5"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">NAP Box Installation</p>
+        </div>
+        <div id="nap-box-installation-6" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#nap-box-installation-5"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#nap-box-installation-7"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/nap-box-installation-6.jpg"
+            alt="NAP box installation photo 6"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">NAP Box Installation</p>
+        </div>
+        <div id="nap-box-installation-7" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#nap-box-installation-6"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#nap-box-installation-1"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/nap-box-installation-7.jpg"
+            alt="NAP box installation photo 7"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">NAP Box Installation</p>
         </div>
 
-        <div id="photo6" class="lightbox">
-          <a href="#close" class="lightbox-close">✕</a>
-          <a href="#photo5" class="lightbox-prev" aria-label="Previous Photo"
+        <div id="drilling-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <img src="images/drilling-1.jpg" alt="Drilling" loading="lazy" />
+          <p class="lightbox-caption">Drilling</p>
+        </div>
+        <div id="cable-laying-1" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cable-laying-6"
+            class="lightbox-prev"
+            aria-label="Previous photo"
             >◄</a
           >
-          <a href="#photo1" class="lightbox-next" aria-label="Next Photo">►</a>
+          <a
+            href="#cable-laying-2"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
           <img
-            src="images/cable-management.jpg"
-            alt="Technician connecting fiber cable to a home junction box"
+            src="images/cable-laying-1.jpg"
+            alt="Cable laying photo 1"
+            loading="lazy"
           />
+          <p class="lightbox-caption">Cable Laying</p>
+        </div>
+        <div id="cable-laying-2" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cable-laying-1"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cable-laying-3"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cable-laying-2.jpg"
+            alt="Cable laying photo 2"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cable Laying</p>
+        </div>
+        <div id="cable-laying-3" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cable-laying-2"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cable-laying-4"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cable-laying-3.jpg"
+            alt="Cable laying photo 3"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cable Laying</p>
+        </div>
+        <div id="cable-laying-4" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cable-laying-3"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cable-laying-5"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cable-laying-4.jpg"
+            alt="Cable laying photo 4"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cable Laying</p>
+        </div>
+        <div id="cable-laying-5" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cable-laying-4"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cable-laying-6"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cable-laying-5.jpg"
+            alt="Cable laying photo 5"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cable Laying</p>
+        </div>
+        <div id="cable-laying-6" class="lightbox">
+          <a href="#close" class="lightbox-close" aria-label="Close">×</a>
+          <a
+            href="#cable-laying-5"
+            class="lightbox-prev"
+            aria-label="Previous photo"
+            >◄</a
+          >
+          <a
+            href="#cable-laying-1"
+            class="lightbox-next"
+            aria-label="Next photo"
+            >►</a
+          >
+          <img
+            src="images/cable-laying-6.jpg"
+            alt="Cable laying photo 6"
+            loading="lazy"
+          />
+          <p class="lightbox-caption">Cable Laying</p>
         </div>
       </section>
 
@@ -214,6 +1204,7 @@
 
         <div class="footer-links">
           <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
@@ -221,11 +1212,73 @@
 
         <div class="footer-contact">
           <h4>Contact</h4>
-          <a href="tel:+639105039954">+63 910 503 9954</a>
-          <a href="mailto:rhougenelegend@gmail.com">rhougenelegend@gmail.com</a>
+          <a class="footer-contact-link" href="tel:+639639561924">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.6 3.8 9.2 3.2l2 4.6-1.7 1.3a14.6 14.6 0 0 0 5.4 5.4l1.3-1.7 4.6 2-.6 2.6a2 2 0 0 1-2.2 1.5A16.9 16.9 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"
+              />
+            </svg>
+            <span>09639561924 </span>
+          </a>
+          <a class="footer-contact-link" href="mailto:rhougenelegend@gmail.com">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            <span>ayuracorporation@gmail.com</span>
+          </a>
+          <a
+            class="footer-contact-link"
+            href="https://www.facebook.com/share/19fNKnvAeK/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="footer-contact-icon footer-contact-icon-facebook"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="currentColor"
+                stroke="none"
+              />
+              <path
+                d="M13.3 21v-8h2.7l.4-3h-3.1V8c0-.9.3-1.4 1.5-1.4h1.7V3.9c-.3 0-1.2-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.5v3h2.6v8h3.2Z"
+                fill="#ffffff"
+                stroke="none"
+              />
+            </svg>
+            <span>Visit our Facebook page</span>
+          </a>
         </div>
       </div>
       <p class="copyright">&copy; 2026 A&C Corp. All rights reserved.</p>
     </footer>
+    <a class="back-to-top" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
   </body>
 </html>
