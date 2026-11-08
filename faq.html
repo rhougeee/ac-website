@@ -1,139 +1,196 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | A&C FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="faq.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A&C FAQ</title>
-  <link rel="stylesheet" href="faq.css" />
-</head>
+  <body id="top">
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
+        </a>
 
-<body></body>
+        <!-- Mobile Menu Toggle -->
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        />
+        <label for="nav-toggle" class="hamburger">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <label for="nav-toggle" class="overlay"></label>
 
-</html>
+        <!-- Navigation Links -->
+        <ul class="nav-container">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Service</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faq.html" id="active">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-<header>
-  <nav>
-    <a href="index.html">
-      <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
-    </a>
+        <a href="contact.html" class="quote">Get a Quote</a>
+      </nav>
+    </header>
 
-    <!-- Mobile Menu Toggle -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="hamburger">&#9776;</label>
-    <label for="nav-toggle" class="overlay"></label>
+    <main>
+      <!-- faq  -->
+      <section class="faq-hero">
+        <div class="hero-content">
+          <span class="section-label">FREQUENTLY ASKED QUESTIONS</span>
 
-    <!-- Navigation Links -->
-    <ul class="nav-container">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html" class="active">Service</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+          <h1>Frequently Asked Questions</h1>
 
-    <a href="contact.html" class="quote">Get a Quote</a>
-  </nav>
-</header>
+          <p>
+            Our Frequently Asked Questions (FAQ) section is designed to provide
+            clear and helpful information to guide you through every step of
+            getting a reliable fiber optic connection.
+          </p>
 
-<main>
+          <div class="hero-buttons">
+            <a href="contact.html" class="quote-button">Get a Free Quote</a>
+            <a href="tel:+639639561924" class="call-button">Call Us Now</a>
+          </div>
+        </div>
+      </section>
 
-  <!-- faq  -->
-  <section class="faq-hero">
-    <div class="hero-content">
-      <span class="section-label">FREQUENTLY ASKED QUESTIONS</span>
+      <section class="faq">
+        <details name="faq" open>
+          <summary>What is fiber optic internet</summary>
+          <p>
+            Fiber-optic internet is a high-speed broadband connection that
+            transmits data as pulses of light through ultra-thin strands of
+            glass or plastic.
+          </p>
+        </details>
 
-      <h1>
-        Learn more about our installation process, service packages, pricing, scheduling, equipment requirements, and
-        maintenance.
-      </h1>
+        <details name="faq">
+          <summary>What is fiber optic cable installation?</summary>
+          <p>
+            Fiber optic cable installation is the process of laying and
+            connecting fiber optic cables to establish reliable, high-speed
+            communication networks. This may involve aerial installation,
+            underground cable laying, splicing, and testing.
+          </p>
+        </details>
 
-      <p>
-        Our Frequently Asked Questions (FAQ) section is designed to provide clear and helpful information to guide you
-        through every step of getting a reliable fiber optic connection.
-      </p>
+        <details name="faq">
+          <summary>
+            What is the difference between aerial and underground cable
+            installation?
+          </summary>
+          <p>
+            Aerial installation involves placing fiber optic cables along
+            utility poles, while underground installation involves laying cables
+            beneath the ground through conduits, ducts, or underground
+            structures such as manholes and vaults.
+          </p>
+        </details>
 
-      <div class="hero-buttons">
-        <a href="contact.html" class="quote-button">Get a Free Quote</a>
-        <a href="tel:+639105039954" class="call-button">Call Us Now</a>
-      </div>
-    </div>
-  </section>
+        <details name="faq">
+          <summary>
+            Does A&C Corp provide fiber optic splicing services?
+          </summary>
+          <p>
+            Yes. A&C Corp provides fiber optic splicing services, including
+            fusion splicing and ribbon splicing, to connect fiber optic cables
+            and establish reliable network connections.
+          </p>
+        </details>
 
+        <details name="faq">
+          <summary>What is OTDR testing, and why is it important?</summary>
+          <p>
+            OTDR (Optical Time-Domain Reflectometer) testing is used to evaluate
+            fiber optic cables, identify faults, locate cable breaks, and
+            measure signal loss. It helps ensure that installed fiber optic
+            networks meet performance requirements.
+          </p>
+        </details>
 
-  <section class="faq">
+        <details name="faq">
+          <summary>
+            How long does a fiber optic installation project take?
+          </summary>
+          <p>
+            Project duration depends on several factors, including the project
+            size, installation method, site conditions, cable route, and overall
+            requirements. A&C Corp assesses each project to determine its
+            expected timeline.
+          </p>
+        </details>
 
-    <details name="faq" open>
-      <summary>What is fiber optic internet</summary>
-      <p>Fiber-optic internet is a high-speed broadband connection that transmits data as pulses of light through
-        ultra-thin strands of glass or plastic.</p>
-    </details>
+        <details name="faq">
+          <summary>
+            Does A&C Corp handle both residential and commercial fiber optic
+            installations?
+          </summary>
+          <p>
+            A&C Corp provides fiber optic infrastructure and installation
+            services for various project requirements, including Fiber to the
+            Home (FTTH) and Fiber to the Building (FTTB) deployments.
+          </p>
+        </details>
 
-    <details name="faq">
-      <summary>Benefits of the fiber optic internet</summary>
-      <p>It offers high internet speeds, low latency, reliable connectivity, and better performance for activities such
-        as streaming, online gaming, video conferencing, and downloading large files..</p>
-    </details>
+        <details name="faq">
+          <summary>
+            Does A&C Corp provide maintenance and repair services?
+          </summary>
+          <p>
+            Yes. A&C Corp offers managed operations and maintenance services,
+            including preventive maintenance, site inspections, emergency cable
+            restoration, and troubleshooting to help maintain network
+            reliability.
+          </p>
+        </details>
 
-    <details name="faq">
-      <summary>How long does fiber optic installation take?</summary>
-      <p>A standard installation may take a few hours, but complicated installations can take longer depending on the
-        property's layout and the availability of existing fiber infrastructure.</p>
-    </details>
+        <details name="faq">
+          <summary>
+            What information is needed to request an inquiry or quotation?
+          </summary>
+          <p>
+            To request a quotation, clients should provide their project
+            location, scope of work, estimated cable route or distance, type of
+            installation required, and any available technical specifications or
+            project plans.
+          </p>
+        </details>
 
-    <details name="faq">
-      <summary> Can fiber optic cables be damaged?</summary>
-      <p>Yes. Excessive bending, crushing, pulling, or improper handling can damage the cable and affect the connection.
-      </p>
-    </details>
+        <details name="faq">
+          <summary>
+            How can I request A&C Corp's services or get an inquiry/quotation?
+          </summary>
+          <p>
+            You can contact A&C Corp through the contact information or inquiry
+            form on this website. Provide your project details and requirements,
+            and our team will assist you with your inquiry.
+          </p>
+        </details>
+      </section>
 
-
-    <details name="faq">
-      <summary>Can fiber optic internet support multiple devices? </summary>
-      <p>Yes. It can support smartphones, laptops, smart TVs, security cameras, and other connected devices. Performance
-        depends on your internet plan, router capacity, and simultaneous usage.</p>
-    </details>
-
-    <details name="faq">
-      <summary> How often does fiber optic cabling need replacement? </summary>
-      <p>Fiber optic cables can last for many years when properly installed and protected. Replacement is generally
-        needed only when cables are damaged, degraded, or no longer suitable for the network.</p>
-    </details>
-
-    <details name="faq">
-      <summary> Can fiber optic internet be installed in an apartment or condominium?</summary>
-      <p>Yes, provided that fiber service is available and the building administration or property owner permits the
-        installation.</p>
-    </details>
-
-    <details name="faq">
-      <summary> What equipment is required for fiber optic internet? </summary>
-      <p>Common equipment includes a fiber optic cable, an Optical Network Terminal (ONT) or compatible modem, and a
-        Wi-Fi router. Some devices combine the ONT and router in one unit.
-      </p>
-    </details>
-
-    <details name="faq">
-      <summary> Where should I place my Wi-Fi router at home?
-      </summary>
-      <p>Place it in a central, elevated, and open location away from thick walls, large metal objects, and sources of
-        interference.
-        </p>
-    </details>
-
-    <details name="faq">
-      <summary> How do I maintain my fiber optic connection?
-
-      </summary>
-      <p>Keep cables protected from bending and physical damage. Avoid disconnecting or touching exposed fiber ends, and
-        contact a qualified technician for repairs.
-        </p>
-    </details>
-
-  </section>
-
-  
       <section class="cta-banner">
         <h2>Ready to get connected?</h2>
         <p>Get a free quotation today</p>
@@ -150,6 +207,7 @@
 
         <div class="footer-links">
           <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
@@ -157,13 +215,73 @@
 
         <div class="footer-contact">
           <h4>Contact</h4>
-          <a href="tel:+639105039954">+63 910 503 9954</a>
-          <a href="mailto:rhougenelegend@gmail.com">rhougenelegend@gmail.com</a>
+          <a class="footer-contact-link" href="tel:+639639561924">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.6 3.8 9.2 3.2l2 4.6-1.7 1.3a14.6 14.6 0 0 0 5.4 5.4l1.3-1.7 4.6 2-.6 2.6a2 2 0 0 1-2.2 1.5A16.9 16.9 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"
+              />
+            </svg>
+            <span>09639561924 </span>
+          </a>
+          <a class="footer-contact-link" href="mailto:rhougenelegend@gmail.com">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            <span>ayuracorporation@gmail.com</span>
+          </a>
+          <a
+            class="footer-contact-link"
+            href="https://www.facebook.com/share/19fNKnvAeK/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="footer-contact-icon footer-contact-icon-facebook"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="currentColor"
+                stroke="none"
+              />
+              <path
+                d="M13.3 21v-8h2.7l.4-3h-3.1V8c0-.9.3-1.4 1.5-1.4h1.7V3.9c-.3 0-1.2-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.5v3h2.6v8h3.2Z"
+                fill="#ffffff"
+                stroke="none"
+              />
+            </svg>
+            <span>Visit our Facebook page</span>
+          </a>
         </div>
       </div>
       <p class="copyright">&copy; 2026 A&C Corp. All rights reserved.</p>
     </footer>
-
+    <a class="back-to-top" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
   </body>
-
-  </html>
+</html>

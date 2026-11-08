@@ -26,14 +26,6 @@ body {
   background-color: white;
 }
 
-:root {
-  --primary-color: #0b2545;
-  --secondary-color: #00b4d8;
-  --accent: #ff6b35;
-  --surface: #f4f6f8;
-  --text-color: #1e2530;
-}
-
 body {
   color: var(--text-color);
 }
@@ -58,6 +50,8 @@ ul {
   align-items: center;
   gap: 30px;
   margin: auto;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
@@ -66,18 +60,24 @@ ul {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   height: 80px;
-  padding: 0px 40px;
-  padding-left: 20px;
+  padding: 0 40px 0 20px;
   display: flex;
   align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #e8edf2ad;
+  border-radius: 0px 0px 15px 15px;
 }
 
 nav {
   display: flex;
   align-items: center;
   flex: auto;
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .quote {
@@ -97,6 +97,18 @@ nav {
   opacity: 100%;
 }
 
+.nav-container a:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.nav-toggle:focus-visible + .hamburger {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 #active {
   color: var(--accent);
   font-weight: bold;
@@ -108,18 +120,19 @@ nav {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: var(--hero-padding-block) 20px;
 }
 
 .hero h1 {
-  max-width: 600px;
+  max-width: 720px;
   margin: 0 auto;
+  margin-bottom: 16px;
 }
 
 .hero p {
   color: whitesmoke;
   opacity: 75%;
-  max-width: 600px;
+  max-width: var(--hero-copy-max);
   margin: 0 auto;
   margin-bottom: 24px;
 }
@@ -127,7 +140,6 @@ nav {
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 50px;
 }
 
 .quote-button {
@@ -139,11 +151,21 @@ nav {
 }
 
 .call-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: transparent;
   color: white;
   border: 1px solid white;
   padding: 10px 20px;
   border-radius: 5px;
+}
+
+.call-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
 }
 
 /*CAROUSEL LOOP*/
@@ -210,6 +232,14 @@ nav {
   padding: 10px 20px;
   gap: 5px;
   text-align: center;
+}
+
+.service-card-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-self: center;
+  color: var(--primary-color);
 }
 
 .service-card h3 {
@@ -321,6 +351,29 @@ footer {
   gap: 10px;
 }
 
+.footer-contact-link {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 8px;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact-link span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+
+.footer-contact-icon-facebook {
+  color: #1877f2;
+}
+
 .copyright {
   text-align: center;
   margin-top: 20px;
@@ -336,7 +389,7 @@ footer {
 
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 26px;
+    font-size: var(--hero-title-size);
   }
 
   .hero-buttons {
@@ -358,10 +411,32 @@ footer {
     display: none;
   }
 
-  .hamburger {
+  .nav-toggle {
     display: block;
-    font-size: 24px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
+    cursor: pointer;
+  }
+
+  .hamburger svg {
+    display: block;
+    width: 24px;
+    height: 24px;
   }
 
   .nav-container {
@@ -388,6 +463,10 @@ footer {
     transform: translateX(0);
   }
 
+  .nav-container a:focus-visible {
+    outline-color: var(--accent);
+  }
+
   .overlay {
     display: none;
     position: fixed;
@@ -409,5 +488,67 @@ footer {
 
   .footer-about img {
     margin-left: auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  right: calc(24px + env(safe-area-inset-right, 0px));
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 4;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.25);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-to-top svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  transform: translateY(-2px);
+  background-color: var(--accent);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  .back-to-top {
+    right: calc(16px + env(safe-area-inset-right, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .back-to-top {
+    transition: none;
   }
 }

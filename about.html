@@ -3,8 +3,332 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A&C About</title>
+    <title>About | A&amp;C Corp</title>
+    <meta
+      name="description"
+      content="Learn about A&C Corp and its work in telecommunications and fiber optic infrastructure."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared.css" />
     <link rel="stylesheet" href="about.css" />
   </head>
-  <body></body>
+  <body id="top">
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
+        </a>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        />
+        <label for="nav-toggle" class="hamburger">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <label for="nav-toggle" class="overlay"></label>
+        <ul class="nav-container">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" id="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="quote">Get a Quote</a>
+      </nav>
+    </header>
+
+    <main class="about-page">
+      <section class="about-hero" aria-labelledby="about-title">
+        <div class="about-hero-content">
+          <p class="about-eyebrow">ABOUT A&amp;C CORP</p>
+          <h1 id="about-title">Connecting networks. Building reliability.</h1>
+          <p class="about-hero-copy">
+            A&amp;C Corp works in telecommunications and fiber optic
+            infrastructure, supporting reliable connections from outdoor network
+            routes to indoor spaces.
+          </p>
+          <div class="about-hero-actions">
+            <a class="about-button about-button-primary" href="contact.html">
+              Get a Quote
+            </a>
+            <a class="about-button about-button-secondary" href="services.html">
+              Explore our services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-overview" aria-labelledby="overview-title">
+        <div class="about-overview-copy">
+          <p class="about-eyebrow">COMPANY OVERVIEW</p>
+          <h2 id="overview-title">
+            Infrastructure that keeps people connected.
+          </h2>
+          <p>
+            A&amp;C Corp is a company estabglished on November 2025, provides
+            fiber optic and network infrastructure services for residential,
+            commercial, network, and telecommunications projects. The work
+            supports communication networks across outdoor routes and indoor
+            environments.
+          </p>
+          <p>
+            From installation through testing and ongoing maintenance, A&amp;C
+            supports the practical infrastructure behind dependable
+            connectivity.
+          </p>
+        </div>
+        <figure class="about-overview-image">
+          <div class="about-overview-slideshow" aria-hidden="true">
+            <img src="images/ac-workers-1.jpg" alt="" loading="lazy" />
+            <img src="images/ac-workers-2.jpg" alt="" loading="lazy" />
+            <img src="images/ac-workers-3.jpg" alt="" loading="lazy" />
+            <img src="images/ac-workers-4.jpg" alt="" loading="lazy" />
+          </div>
+          <figcaption>
+            Consisting of 20 employees, including both field and office staff
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="about-work" aria-labelledby="what-we-do-title">
+        <div class="about-section-heading">
+          <p class="about-eyebrow">WHAT WE DO</p>
+          <h2 id="what-we-do-title">
+            Supporting the network from route to operation.
+          </h2>
+          <p>
+            A&amp;C brings together the infrastructure, connections, and ongoing
+            care needed to support telecommunications and fiber optic networks.
+          </p>
+        </div>
+        <div class="about-work-grid">
+          <article class="about-work-card">
+            <span class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4m14 16V4M5 8h14M5 16h14M9 8v8m6-8v8" />
+              </svg>
+            </span>
+            <h3>Outdoor infrastructure</h3>
+            <p>
+              Building and supporting outside plant routes and facilities for
+              telecommunications networks.
+            </p>
+          </article>
+          <article class="about-work-card">
+            <span class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 12h5l3-6 4 12 3-6h3" />
+                <circle cx="3" cy="12" r="1" />
+                <circle cx="21" cy="12" r="1" />
+              </svg>
+            </span>
+            <h3>Fiber connectivity</h3>
+            <p>
+              Installing, joining, and testing optical connections for
+              dependable network links.
+            </p>
+          </article>
+          <article class="about-work-card">
+            <span class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="3" width="16" height="18" rx="1" />
+                <path d="M8 7h8M8 11h8M8 15h3m5 0h.01" />
+              </svg>
+            </span>
+            <h3>Indoor network systems</h3>
+            <p>
+              Organizing structured cabling and equipment connections in
+              buildings and technical spaces.
+            </p>
+          </article>
+          <article class="about-work-card">
+            <span class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 13a8 8 0 0 1 16 0M6 13v5h3v-5H6Zm9 0v5h3v-5h-3ZM12 5V3m-8 5-1-1m17 1 1-1"
+                />
+              </svg>
+            </span>
+            <h3>Operations &amp; maintenance</h3>
+            <p>
+              Providing maintenance and restoration support to help keep network
+              infrastructure working.
+            </p>
+          </article>
+        </div>
+        <a class="about-text-link" href="services.html">View all services</a>
+      </section>
+
+      <section class="about-strengths" aria-labelledby="why-ac-title">
+        <div class="about-section-heading about-strengths-heading">
+          <p class="about-eyebrow">WHY A&amp;C</p>
+          <h2 id="why-ac-title">Built around reliable connectivity.</h2>
+          <p>
+            A successful fiber optic project takes more than laying cable.
+            A&amp;C focuses on careful installation, proper testing, and
+            dependable support throughout the project.
+          </p>
+        </div>
+        <div class="about-strengths-grid">
+          <article class="about-strength">
+            <span class="about-strength-number">01</span>
+            <div>
+              <h3>Professional installation</h3>
+              <p>
+                Organized and careful practices for clean, dependable network
+                infrastructure.
+              </p>
+            </div>
+          </article>
+          <article class="about-strength">
+            <span class="about-strength-number">02</span>
+            <div>
+              <h3>Reliable testing</h3>
+              <p>
+                Fiber connections are tested to help verify links and identify
+                potential issues.
+              </p>
+            </div>
+          </article>
+          <article class="about-strength">
+            <span class="about-strength-number">03</span>
+            <div>
+              <h3>Project-focused solutions</h3>
+              <p>
+                Services can be adapted to residential, commercial, network, and
+                telecommunications requirements.
+              </p>
+            </div>
+          </article>
+          <article class="about-strength">
+            <span class="about-strength-number">04</span>
+            <div>
+              <h3>Long-term support</h3>
+              <p>
+                Maintenance and restoration services help support infrastructure
+                after installation.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-cta" aria-labelledby="about-cta-title">
+        <div class="about-cta-content">
+          <p class="about-eyebrow">LET'S GET STARTED</p>
+          <h2 id="about-cta-title">Planning a connectivity project?</h2>
+          <p>
+            Talk to A&amp;C about your fiber optic or network infrastructure
+            requirements.
+          </p>
+          <a class="about-button about-button-primary" href="contact.html">
+            Contact A&amp;C
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-about">
+          <img src="images/A&C-logo.png" alt="A&C Corp" class="logo" />
+          <p>Connecting Networks. <br />Building Reliability.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <a class="footer-contact-link" href="tel:+639639561924">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.6 3.8 9.2 3.2l2 4.6-1.7 1.3a14.6 14.6 0 0 0 5.4 5.4l1.3-1.7 4.6 2-.6 2.6a2 2 0 0 1-2.2 1.5A16.9 16.9 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"
+              />
+            </svg>
+            <span>09639561924</span>
+          </a>
+          <a class="footer-contact-link" href="mailto:rhougenelegend@gmail.com">
+            <svg
+              class="footer-contact-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            <span>ayuracorporation@gmail.com</span>
+          </a>
+          <a
+            class="footer-contact-link"
+            href="https://www.facebook.com/share/19fNKnvAeK/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="footer-contact-icon footer-contact-icon-facebook"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="currentColor"
+                stroke="none"
+              />
+              <path
+                d="M13.3 21v-8h2.7l.4-3h-3.1V8c0-.9.3-1.4 1.5-1.4h1.7V3.9c-.3 0-1.2-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.5v3h2.6v8h3.2Z"
+                fill="#ffffff"
+                stroke="none"
+              />
+            </svg>
+            <span>Visit our Facebook page</span>
+          </a>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 A&amp;C Corp. All rights reserved.</p>
+    </footer>
+    <a class="back-to-top" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
+  </body>
 </html>
